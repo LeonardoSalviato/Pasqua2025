@@ -28,17 +28,19 @@ body {
     background-image: url(pasqua.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     margin: 0;
     padding: 0;
 }
 h1 {
     text-align: center;
+    font-size: 2rem; /* Dimensione del titolo adattabile */
+    margin-top: 20px;
 }
 #div {
     margin: 0 auto;
     width: 50%;
     text-align: center;
-    margin-left: 400px;
 }
 h2 {
     text-align: center;
@@ -51,15 +53,54 @@ h2 {
     margin-top: 0%;
 }
 
+/* Stili per il form */
+form#from {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50%; /* Larghezza del form */
+    padding: 20px;
+    border: 1px solid #ccc; /* Bordo opzionale */
+    border-radius: 10px; /* Arrotonda gli angoli */
+    background-color: #f9f9f9; /* Colore di sfondo del form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra */
+}
+
+form#from label,
+form#from input,
+form#from button {
+    width: 100%; /* Gli elementi del form occupano tutta la larghezza */
+    margin-bottom: 15px; /* Spaziatura tra gli elementi */
+}
+
+form#from button {
+    width: auto; /* Il pulsante ha una larghezza automatica */
+    padding: 10px 20px;
+    background-color: #FF831C; /* Colore del pulsante */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form#from button:hover {
+    background-color: #e67300; /* Colore del pulsante al passaggio del mouse */
+}
+
 /* Stili responsive */
 @media screen and (max-width: 768px) {
     body {
         background-size: cover;
         background-position: center;
     }
+    h1 {
+        font-size: 1.5rem; 
+    }
     #div {
         margin: 0 auto;
-        width: 90%;
+        width: 90%; 
         text-align: center;
     }
     ul#menu {
@@ -67,8 +108,8 @@ h2 {
         padding: 0;
     }
     ul#menu li {
-        width: 100%;
-        float: none; /* Dispone gli elementi in verticale */
+        width: 100%; 
+        float: none; 
         margin: 5px 0;
     }
     ul#menu li a {
@@ -78,5 +119,35 @@ h2 {
         margin-left: 0;
         margin-top: 10px;
         text-align: center;
+    }
+    form#from {
+        width: 90%; 
+        padding: 15px;
+    }
+    form#from label,
+    form#from input,
+    form#from button {
+        font-size: 1rem; 
+    }
+    form#from button {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem; 
+    }
+    form#from {
+        width: 100%; 
+        padding: 10px;
+    }
+    form#from label,
+    form#from input,
+    form#from button {
+        font-size: 0.9rem; 
+    }
+    form#from button {
+        padding: 8px;
     }
 }

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRENOTA</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>PRENOTA</h1>
     <div id="div">
@@ -16,8 +18,69 @@
             <li><a href="prenota.html">PRENOTA POSTO</a></li>
         </ul>
     </div>
-    <p>
-        
-    </p>
+    <form id="from">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="cognome">Cognome:</label>
+        <input type="text" id="cognome" name="cognome" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="telefono">Telefono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+        <br><br>
+        <button type="button" id="saveButton">Invia</button>
+    </form>
+
+    <!-- Inclusione della libreria EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "p27Atf12PrXn4z_Zl", // Sostituisci con la tua Public Key valida
+            });
+        })();
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('saveButton').addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Ottieni i dati dal form
+                const name = document.getElementById('name').value;
+                const cognome = document.getElementById('cognome').value;
+                const email = document.getElementById('email').value;
+                const telefono = document.getElementById('telefono').value;
+
+                if (!name || !cognome || !email || !telefono) {
+                    alert('Compila tutti i campi!');
+                    return;
+                }
+
+                // Prepara i dati per l'email
+                const templateParams = {
+                    name: name,
+                    cognome: cognome,
+                    email: email,
+                    telefono: telefono,
+                };
+
+                console.log('Template Params:', templateParams);
+
+                // Invia l'email tramite EmailJS
+                emailjs.send('service_r2ebvdd', 'template_pnhz87y', templateParams) // Sostituisci con i tuoi valori
+                    .then(function (response) {
+                        alert('Prenotazione inviata con successo!');
+                        console.log('SUCCESS!', response.status, response.text);
+                    }, function (error) {
+                        alert('Errore durante l\'invio della prenotazione.');
+                        console.error('FAILED...', error);
+                    });
+            });
+        });
+    </script>
 </body>
+
 </html>
