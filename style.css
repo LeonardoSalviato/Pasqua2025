@@ -5,14 +5,17 @@ ul#menu {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Permette al menu di adattarsi su più righe */
+    justify-content: center; /* Centra gli elementi del menu */
 }
 ul#menu li {
     background-color: #FF831C;
     display: block;
     width: 150px;
     height: 30px;
-    margin: 2px;
-    float: left; /* elementi su singola riga */
+    margin: 5px; /* Aggiunge spazio tra gli elementi */
+    text-align: center;
 }
 ul#menu li a {
     color: #fff;
@@ -20,8 +23,8 @@ ul#menu li a {
     font-weight: bold;
     line-height: 30px;
     text-decoration: none;
-    width: 150px;
-    height: 30px;
+    width: 100%;
+    height: 100%;
     text-align: center;
 }
 body {
@@ -39,7 +42,7 @@ h1 {
 }
 #div {
     margin: 0 auto;
-    width: 50%;
+    width: 80%;
     text-align: center;
 }
 h2 {
@@ -49,8 +52,10 @@ h2 {
     text-align: center;
 }
 .nomi {
-    margin-left: 47%;
-    margin-top: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: center;
 }
 
 /* Stili per il form */
@@ -96,38 +101,32 @@ form#from button:hover {
         background-position: center;
     }
     h1 {
-        font-size: 1.5rem; 
+        font-size: 1.5rem; /* Riduce la dimensione del titolo su schermi piccoli */
     }
     #div {
         margin: 0 auto;
-        width: 90%; 
+        width: 90%; /* Riduce la larghezza del contenitore */
         text-align: center;
     }
     ul#menu {
-        text-align: center;
-        padding: 0;
+        flex-direction: column; /* Dispone gli elementi del menu in verticale */
+        align-items: center;
     }
     ul#menu li {
-        width: 100%; 
-        float: none; 
+        width: 100%; /* Gli elementi del menu occupano tutta la larghezza */
         margin: 5px 0;
     }
     ul#menu li a {
         width: 100%;
     }
-    .nomi {
-        margin-left: 0;
-        margin-top: 10px;
-        text-align: center;
-    }
     form#from {
-        width: 90%; 
+        width: 90%; /* Riduce la larghezza del form su schermi piccoli */
         padding: 15px;
     }
     form#from label,
     form#from input,
     form#from button {
-        font-size: 1rem; 
+        font-size: 1rem; /* Adatta la dimensione del testo */
     }
     form#from button {
         padding: 10px;
@@ -136,16 +135,16 @@ form#from button:hover {
 
 @media screen and (max-width: 480px) {
     h1 {
-        font-size: 1.2rem; 
+        font-size: 1.2rem; /* Riduce ulteriormente la dimensione del titolo */
     }
     form#from {
-        width: 100%; 
+        width: 100%; /* Il form occupa tutta la larghezza dello schermo */
         padding: 10px;
     }
     form#from label,
     form#from input,
     form#from button {
-        font-size: 0.9rem; 
+        font-size: 0.9rem; /* Riduce la dimensione del testo per schermi molto piccoli */
     }
     form#from button {
         padding: 8px;
