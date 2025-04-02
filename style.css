@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('pasqua.jpg'); /* Assicurati che il percorso dell'immagine sia corretto */
+    background-image: url('pasqua.webp'); /* Assicurati che il percorso dell'immagine sia corretto */
     background-size: cover; /* L'immagine copre l'intero schermo */
     background-repeat: no-repeat; /* Evita che l'immagine si ripeta */
     background-attachment: fixed; /* Lo sfondo rimane fisso durante lo scroll */
