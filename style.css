@@ -118,6 +118,7 @@ form#from button:hover {
     body {
         background-size: cover; /* L'immagine copre l'intero schermo */
         background-position: center center; /* Centra l'immagine */
+        background-attachment: scroll ;
     }
 
     h1 {
@@ -157,6 +158,7 @@ form#from button:hover {
     body {
         background-size: cover; /* L'immagine copre l'intero schermo */
         background-position: center center; /* Centra l'immagine */
+        background-attachment: scroll;
     }
 
     h1 {
