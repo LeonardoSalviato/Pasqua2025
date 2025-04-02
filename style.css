@@ -18,7 +18,10 @@ header {
     padding: 10px 0;
     text-align: center;
 }
-
+#homeC{
+    text-align: center;
+    margin-top: 5%;
+}
 h1 {
     margin: 0;
     font-size: 2rem;
