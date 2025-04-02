@@ -116,27 +116,31 @@ form#from button:hover {
 /* Stili responsive */
 @media screen and (max-width: 768px) {
     body {
-        background-size: cover;
-        background-position: center;
+        background-size: cover; /* L'immagine copre l'intero schermo */
+        background-position: center center; /* Centra l'immagine */
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Riduce la dimensione del titolo */
     }
 
     h2 {
-        font-size: 1.3rem;
+        font-size: 1.3rem; /* Riduce la dimensione dei sottotitoli */
     }
 
     ul#menu {
-        flex-direction: column; /* Dispone gli elementi del menu in verticale */
-        align-items: center;
+        flex-wrap: nowrap; /* Mantiene il menu orizzontale */
+        overflow-x: auto; /* Permette lo scroll orizzontale se necessario */
+        white-space: nowrap; /* Evita che gli elementi vadano su più righe */
+    }
+
+    ul#menu li {
+        margin: 5px;
     }
 
     ul#menu li a {
-        font-size: 1rem;
-        padding: 10px;
-        width: 100%;
+        font-size: 1rem; /* Mantiene una dimensione leggibile per il testo */
+        padding: 10px 15px; /* Adatta il padding per schermi più piccoli */
     }
 
     form#from {
@@ -150,17 +154,32 @@ form#from button:hover {
 }
 
 @media screen and (max-width: 480px) {
+    body {
+        background-size: cover; /* L'immagine copre l'intero schermo */
+        background-position: center center; /* Centra l'immagine */
+    }
+
     h1 {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Riduce ulteriormente la dimensione del titolo */
     }
 
     h2 {
-        font-size: 1.1rem;
+        font-size: 1.1rem; /* Riduce ulteriormente la dimensione dei sottotitoli */
+    }
+
+    ul#menu {
+        flex-wrap: nowrap; /* Mantiene il menu orizzontale */
+        overflow-x: auto; /* Permette lo scroll orizzontale se necessario */
+        white-space: nowrap; /* Evita che gli elementi vadano su più righe */
+    }
+
+    ul#menu li {
+        margin: 5px;
     }
 
     ul#menu li a {
-        font-size: 0.9rem;
-        padding: 8px;
+        font-size: 0.9rem; /* Riduce leggermente la dimensione del testo */
+        padding: 8px 12px; /* Adatta il padding per schermi molto piccoli */
     }
 
     form#from {
@@ -169,11 +188,11 @@ form#from button:hover {
     }
 
     form#from input {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Riduce la dimensione del testo nei campi */
     }
 
     form#from button {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Riduce la dimensione del pulsante */
         padding: 8px;
     }
 
